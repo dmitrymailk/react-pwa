@@ -1,0 +1,352 @@
+body, html, #root {
+  width: 100%;
+  height: 100%;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+.kanban {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20px;
+  background: url("img/cosmos.jpg");
+}
+
+.kanban::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 3px;
+}
+
+.kanban::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  border-radius: 3px;
+}
+
+.kanban::-webkit-scrollbar-thumb {
+  background-color: #879bbd;
+  outline: 1px solid slategrey;
+  border-radius: 3px;
+}
+
+.kanban::-webkit-scrollbar-corner {
+  border-radius: 3px;
+}
+
+.kanban__list-cards {
+  background-color: #dfe3e6;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: 100%;
+  position: relative;
+}
+
+.kanban__addList {
+  min-width: 272px;
+  height: 97px;
+  background: #DFE3E6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 3px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  margin-right: 12px;
+}
+
+.kanban__addList-input {
+  width: calc(100% - 36px);
+  margin: 12px 0 8px 0;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 1px 4px rgba(9, 45, 66, 0.25);
+          box-shadow: 0px 1px 4px rgba(9, 45, 66, 0.25);
+  border-radius: 3px;
+  margin-bottom: 8px;
+  height: auto;
+  cursor: pointer;
+  resize: none;
+  outline: none;
+  height: 27px;
+  border: none;
+  font-size: 13px;
+  padding: 8px 0 0 12px;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+.kanban__addList-button {
+  width: 147px;
+  height: 30px;
+  background: #39C071;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 19px;
+  color: #FFFFFF;
+  font-family: Montserrat;
+  border: none;
+  outline: none;
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  cursor: pointer;
+}
+
+.kanban__addList-close {
+  position: absolute;
+  bottom: 19px;
+  right: 12px;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper-list {
+  width: 272px;
+  margin-right: 12px;
+  height: 100%;
+}
+
+.list-cards__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  top: 0;
+  right: 0;
+}
+
+.list-cards__title-text {
+  margin: 8px 0 12px 12px;
+}
+
+.list-cards__cards {
+  margin-bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 272px;
+  font-size: 13px;
+}
+
+.list-cards__cards::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 3px;
+}
+
+.list-cards__cards::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  border-radius: 3px;
+}
+
+.list-cards__cards::-webkit-scrollbar-thumb {
+  background-color: #879bbd;
+  outline: 1px solid slategrey;
+  border-radius: 3px;
+}
+
+.list-cards__cards::-webkit-scrollbar-corner {
+  border-radius: 3px;
+}
+
+.list-cards__cards-card {
+  width: calc(100% - 48px);
+  padding: 8px 12px 8px 12px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 1px 4px rgba(9, 45, 66, 0.25);
+          box-shadow: 0px 1px 4px rgba(9, 45, 66, 0.25);
+  border-radius: 3px;
+  margin-bottom: 8px;
+  height: auto;
+  cursor: pointer;
+  word-break: break-all;
+}
+
+.list-cards__new {
+  border-radius: 0 0 3px 3px;
+  color: #6b808c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  padding-left: 8px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  position: relative;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  height: 43px;
+  width: 272px;
+}
+
+.list-cards__new-text {
+  color: #6B808C;
+  line-height: 19px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 19px;
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+.list-cards__input {
+  width: calc(100% - 48px);
+  padding: 8px 12px 8px 12px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 1px 4px rgba(9, 45, 66, 0.25);
+          box-shadow: 0px 1px 4px rgba(9, 45, 66, 0.25);
+  border-radius: 3px;
+  margin-bottom: 8px;
+  height: auto;
+  cursor: pointer;
+  resize: none;
+  outline: none;
+  min-height: 38px;
+  border: none;
+}
+
+.list-cards__new-button {
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #DFE3E6;
+  border-radius: 3px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.new-button__accept {
+  width: 152px;
+  height: 30px;
+  background: #39C071;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 19px;
+  color: #FFFFFF;
+  font-family: Montserrat;
+  border: none;
+  outline: none;
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.new-button__close {
+  position: absolute;
+  bottom: 19px;
+  right: 12px;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sortable-ghost.sortable-chosen {
+  background: #C9D2D9;
+  position: relative;
+}
+
+.sortable-ghost.sortable-chosen:before {
+  content: '';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #C9D2D9;
+  right: 0;
+  top: 0;
+  border-radius: 3px;
+}
+/*# sourceMappingURL=style.css.map */
